@@ -1,19 +1,18 @@
 package com.example;
 
-import java.io.InputStreamReader; // <--- ADDED
+import java.io.InputStreamReader;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
 import org.json.JSONObject;
 import org.json.JSONArray;
-import org.json.JSONTokener; // <--- ADDED
+import org.json.JSONTokener;
 
 public class Main {
   
     public static void main(String[] args) {
         System.out.println("Write Json to vless://");
         try {
-            // Now this line will compile properly
             JSONObject json = new JSONObject(new JSONTokener(new InputStreamReader(System.in, StandardCharsets.UTF_8)));
             
             JSONObject proxyOutbound = null;
